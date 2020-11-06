@@ -72,7 +72,7 @@ def draw(img, rotate_degree, dets, landmark):
         cv2.circle(img, (landmark[l][0], landmark[l][1]), 1, color, 2)
 
 def check_straight(img, param, count, state_index, reset_count ):
-    cv2.putText(img, "nhin thang", (300, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), thickness=2)
+    cv2.putText(img, "yeu cau nhin thang", (300, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), thickness=2)
     if param.straight.min_yaw < yaw < param.straight.max_yaw:
         count = count + 1
         cv2.putText(img, str(count), (300, 30 + (50)), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), thickness=2)
@@ -90,7 +90,7 @@ def check_straight(img, param, count, state_index, reset_count ):
     return count, state_index, reset_count
 
 def check_left(img, param, count, state_index, reset_count ):
-    cv2.putText(img, "quay trai", (300, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), thickness=2)
+    cv2.putText(img, "yeu cau quay trai", (300, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), thickness=2)
     if param.left.max_yaw > yaw:
         count = count + 1
         cv2.putText(img, str(count), (300, 30 + (50)), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), thickness=2)
