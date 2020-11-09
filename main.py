@@ -114,7 +114,7 @@ def check_left(img, param, count, state_index, reset_count ):
 # 2. ngua mat len tren
 # 3. quay sang phai
 # 4. up mat xuong duoi
-
+#####
 if __name__ == '__main__':
     pose_estimator = pose()
     net, device, cfg = load_net()
